@@ -13,8 +13,6 @@
     <description>This package works with Windows Azure - Service Bus. 
 It adds Microsoft.ServiceBus.dll along with related configuration files to your project. 
 Please note that this package requires .Net Framework 4 Full Profile.</description>
-    <releaseNotes />
-    <copyright />
     <language>en-US</language>
     <tags>ServiceBus Microsoft Azure AppFabric Messaging PubSub Publish Subscribe Queue Topic Relay Service Bus windowsazureofficial</tags>
     <dependencies>

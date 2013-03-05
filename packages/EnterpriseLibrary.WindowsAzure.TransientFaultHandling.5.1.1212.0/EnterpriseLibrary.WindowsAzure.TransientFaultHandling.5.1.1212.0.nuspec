@@ -12,9 +12,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>The Transient Fault Handling Application Block for Windows Azure ("Topaz") provides a set of reusable and testable components for adding retry logic into your Windows Azure applications leveraging Windows Azure SQL Database, Windows Azure storage, Service Bus and Caching Service. This makes your Windows Azure application more reliable and resilient to transient faults (such as temporary network connectivity issues or temporary service unavailability). This improves overall application stability.</description>
     <summary>The Transient Fault Handling Application Block for Windows Azure ("Topaz") makes your Windows Azure application more resilient to transient failures by providing intelligent retry logic mechanisms.</summary>
-    <releaseNotes />
     <copyright>© 2011 Microsoft Corporation</copyright>
-    <language />
     <tags>entlib enterprise library elazure Windows Azure block cloud retry retries transient fault exception handling failure network topaz async SQL storage Service Bus Cache caching</tags>
     <dependencies>
       <dependency id="EnterpriseLibrary.Common" version="5.0" />
