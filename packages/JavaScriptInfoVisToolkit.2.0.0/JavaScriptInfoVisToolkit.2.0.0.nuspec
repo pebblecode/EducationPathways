@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>JavaScriptInfoVisToolkit</id>
+    <version>2.0.0</version>
+    <title>JavaScript InfoVis Toolkit</title>
+    <authors>Nicolas Garcia Belmonte</authors>
+    <owners>Nicolas Garcia Belmonte</owners>
+    <licenseUrl>https://github.com/philogb/jit/raw/1c00294cf2a8dd69c70d8133360e030ab99a97f0/LICENSE</licenseUrl>
+    <projectUrl>http://thejit.org/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The JavaScript InfoVis Toolkit provides tools for creating Interactive Data Visualizations for the Web. For more information on how to use the toolkit please visit http://thejit.org.</description>
+    <summary>The JavaScript InfoVis Toolkit provides tools for creating Interactive Data Visualizations for the Web.</summary>
+    <references />
+  </metadata>
+</package>
