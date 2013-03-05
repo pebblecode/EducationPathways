@@ -5,17 +5,17 @@ namespace EducationPathways.Domain
 {
     public class School
     {
-        IEnumerable<FormGroup> FormGroups { get; }
+        IEnumerable<FormGroup> FormGroups { get; set; }
     }
 
     public class FormGroup
     {
-        IEnumerable<Student> Students { get; }
+        IEnumerable<Student> Students { get; set; }
     }
 
     public class Student
     {
-        IEnumerable<Syllabus> Syllabuses { get; }
+        IEnumerable<Syllabus> Syllabuses { get; set; }
     }
 
     public interface INode
