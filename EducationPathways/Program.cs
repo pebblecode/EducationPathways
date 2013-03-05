@@ -15,7 +15,7 @@ namespace EducationPathways
             var discreteMathTopics = new List<Topic>
                 {
                     new Topic("Logic – a study of reasoning"),
-new Topic("Set theory – a study of collections of elements
+new Topic("Set theory – a study of collections of elements"),
 new Topic("Number theory"),
 new Topic("Combinatorics – a study of counting"),
 new Topic("Graph theory"),
