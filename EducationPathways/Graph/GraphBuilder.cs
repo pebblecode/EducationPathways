@@ -29,6 +29,8 @@
 
                     foreach (var nextNode in nextNodes)
                         gdn.Node.NextNodes.Add(nextNode.Node);
+
+                    gdn.Node.SetId(kv.Key);
                 }
             }
 

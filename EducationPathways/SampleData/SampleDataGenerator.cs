@@ -69,7 +69,7 @@
                         .Add(10051, new Topic("Logic"), 10052)
                         .Add(10052, new Topic("Set theory"), 10053)
                         .Add(10053, new Topic("Number theory"), 10054)
-                        .Add(10054, new Topic("Graph theory"), 1005)
+                        .Add(10054, new Topic("Graph theory"), 0)
 
                 .Add(2000, new Syllabus("Computer Science"), 2001)
                     .Add(2001, new Subject("Logic"), 20011)

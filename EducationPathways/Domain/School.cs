@@ -20,16 +20,25 @@ namespace EducationPathways.Domain
 
     public interface INode
     {
+        int Id { get; }
         string Name { get; }
         string Description { get; }
         IList<INode> NextNodes { get; set; }
+
+        void SetId(int id);
     }
 
     public class Syllabus : INode
     {
+        public int Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
         public IList<INode> NextNodes { get; set; }
+
+        public void SetId(int id)
+        {
+            Id = id;
+        }
 
         public Syllabus(string name)
         {
@@ -39,9 +48,15 @@ namespace EducationPathways.Domain
 
     public class Subject : INode
     {
-        public string Name { get; private set; }
+        public int Id { get; private set; }
+        public string Name { get; set; }
         public string Description { get; private set; }
         public IList<INode> NextNodes { get; set; }
+
+        public void SetId(int id)
+        {
+            Id = id;
+        }
 
         public Subject(string name)
         {
@@ -51,11 +66,17 @@ namespace EducationPathways.Domain
 
     public class Topic : INode, IScorable
     {
+        public int Id { get; private set; }
         public int PassThreshold { get; private set; }
         public int Score { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
         public IList<INode> NextNodes { get; set; }
+
+        public void SetId(int id)
+        {
+            Id = id;
+        }
 
         public Topic(string name, string description = "")
         {
