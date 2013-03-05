@@ -65,8 +65,7 @@
                         .Add(10047, new Topic("Imaginary and complex number"), 10048)
                         .Add(10048, new Topic("Hyperbolic trig functions"), 1005)
 
-                    .Add(1005, new Subject("Discrete Maths"), 10051)
-                        .Add(10051, new Topic("Logic"), 10052)
+                    .Add(1005, new Subject("Discrete Maths"), 10052)
                         .Add(10052, new Topic("Set theory"), 10053)
                         .Add(10053, new Topic("Number theory"), 10054)
                         .Add(10054, new Topic("Graph theory"), 0)

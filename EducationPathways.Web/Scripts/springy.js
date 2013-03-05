@@ -81,9 +81,9 @@ Graph.prototype.addNodes = function () {
 
 Graph.prototype.addEdge = function (edge) {
     var exists = false;
-    this.edges.forEach(function (e) {
-        if (edge.id === e.id) { exists = true; }
-    });
+    //this.edges.forEach(function (e) {
+    //    if (edge.id === e.id) { exists = true; }
+    //});
 
     if (!exists) {
         this.edges.push(edge);
@@ -97,9 +97,9 @@ Graph.prototype.addEdge = function (edge) {
     }
 
     exists = false;
-    this.adjacency[edge.source.id][edge.target.id].forEach(function (e) {
-        if (edge.id === e.id) { exists = true; }
-    });
+    //this.adjacency[edge.source.id][edge.target.id].forEach(function (e) {
+    //    if (edge.id === e.id) { exists = true; }
+    //});
 
     if (!exists) {
         this.adjacency[edge.source.id][edge.target.id].push(edge);

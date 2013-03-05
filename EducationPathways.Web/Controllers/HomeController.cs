@@ -16,20 +16,20 @@ namespace EducationPathways.Web.Controllers
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
-            ViewBag.Data = FlattenNode(new Subject("Systems of equations and inequalities")
-            {
-                NextNodes = new List<INode>
-                {
-                    new Subject("Graphing points, equations and inequalities"),
-                    new Subject("Systems of equations and inequalities"),
-                    new Subject("Functions"){ NextNodes = new List<INode>
-                        {
-                            new Subject("Exponent expressions and equations"),
-                            new Subject("Ratios and rational expressions"),
-                            new Subject("Imaginary and complex numbers")
-                        }}
-                }
-            });
+            //ViewBag.Data = FlattenNode(new Subject("Systems of equations and inequalities")
+            //{
+            //    NextNodes = new List<INode>
+            //    {
+            //        new Subject("Graphing points, equations and inequalities"),
+            //        new Subject("Systems of equations and inequalities"),
+            //        new Subject("Functions"){ NextNodes = new List<INode>
+            //            {
+            //                new Subject("Exponent expressions and equations"),
+            //                new Subject("Ratios and rational expressions"),
+            //                new Subject("Imaginary and complex numbers")
+            //            }}
+            //    }
+            //});
 
             ViewBag.Data = FlattenNode(new SampleDataGenerator().Generate());
 
@@ -52,15 +52,20 @@ namespace EducationPathways.Web.Controllers
 
         public string FlattenNode(INode node)
         {
-            return FlattenNode(new StringBuilder(), node, null).ToString();
+            return FlattenNode(new StringBuilder(), node, null, new List<string>()).ToString();
         }
 
-        public StringBuilder FlattenNode(StringBuilder builder, INode node, string parentName)
+        public StringBuilder FlattenNode(StringBuilder builder, INode node, string parentName, IList<string> names)
         {
             if (node == null) return builder;
 
             var nodeVariable = node.Name.ToLower().Replace(" ", "").Replace("(", "").Replace(")","").Replace(",","");
-            builder.AppendFormat("var {0} = graph.newNode({{label: '{1}'}});", nodeVariable, node.Name);
+            if (!names.Contains(nodeVariable))
+            {
+                builder.AppendFormat("var {0} = graph.newNode({{label: '{1}'}});", nodeVariable, node.Name);
+                names.Add(nodeVariable);
+            }
+
 
             if (parentName != null)
                 builder.AppendFormat("graph.newEdge({0}, {1}, {{color: '{2}'}});", parentName, nodeVariable, RandomPastelColorGenerator.Instance.GetNextBrush().Color.ToString());
@@ -68,7 +73,7 @@ namespace EducationPathways.Web.Controllers
             if (node.NextNodes != null)
                 foreach (var subnode in node.NextNodes)
                 {
-                    FlattenNode(builder, subnode, nodeVariable);
+                    FlattenNode(builder, subnode, nodeVariable, names);
                 }
 
             return builder;
