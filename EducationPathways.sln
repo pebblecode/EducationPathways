@@ -9,6 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationPathways.Contracts
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationPathways.ServiceBus", "EducationPathways.ServiceBus\EducationPathways.ServiceBus.csproj", "{8675A36B-5B93-4524-9E93-0054747BEFE2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3BCCD96C-377A-4F81-B9C0-2E30D31FFB1A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +30,6 @@ Global
 		{2691909B-7E0C-492E-877F-5BD2A4AB9692}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2691909B-7E0C-492E-877F-5BD2A4AB9692}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2691909B-7E0C-492E-877F-5BD2A4AB9692}.Release|Any CPU.Build.0 = Release|Any CPU
-		{616401C5-2D58-4A59-A007-77C0782CF7E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{616401C5-2D58-4A59-A007-77C0782CF7E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{616401C5-2D58-4A59-A007-77C0782CF7E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{616401C5-2D58-4A59-A007-77C0782CF7E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7A62BD1E-A54F-41A5-B5F0-3A2EFE7D84EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7A62BD1E-A54F-41A5-B5F0-3A2EFE7D84EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A62BD1E-A54F-41A5-B5F0-3A2EFE7D84EA}.Release|Any CPU.ActiveCfg = Release|Any CPU

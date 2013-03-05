@@ -14,18 +14,16 @@ namespace EducationPathways.Web.Controllers
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
-            ViewBag.Data = FlattenNode(new Subject
-            {
-                Name = "Systems of equations and inequalities",
+            ViewBag.Data = FlattenNode(new Subject("Systems of equations and inequalities"){
                 NextNodes = new List<INode>
                 {
-                    new Subject{Name = "Graphing points, equations and inequalities"},
-                    new Subject{Name = "Systems of equations and inequalities"},
-                    new Subject{Name = "Functions", NextNodes = new List<INode>
+                    new Subject("Graphing points, equations and inequalities"),
+                    new Subject("Systems of equations and inequalities"),
+                    new Subject("Functions"){ NextNodes = new List<INode>
                         {
-                            new Subject{Name = "Exponent expressions and equations"},
-                            new Subject{Name = "Ratios and rational expressions"},
-                            new Subject{Name = "Imaginary and complex numbers"}
+                            new Subject("Exponent expressions and equations"),
+                            new Subject("Ratios and rational expressions"),
+                            new Subject("Imaginary and complex numbers")
                         }}
                 }});
 
