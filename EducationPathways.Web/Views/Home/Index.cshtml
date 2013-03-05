@@ -5,22 +5,27 @@
 @section featured
 {}
 
-<div id="container">
-<div id="center-container">
-    <div id="infovis"></div>    
-</div>
-
-<div id="log"></div>
-</div>
+<canvas id="springydemo" width="640" height="480" />
 
 @section scripts
 {
     <!-- JIT Library File -->
     <!--[if IE]><script language="javascript" type="text/javascript" src="~/Scripts/excanvas.js"></script><![endif]-->
-    <script src="~/Scripts/jit.js"></script>
-    <script src="~/Scripts/pathways.js"></script>
+    <script src="~/Scripts/springy.js"></script>
+    <script src="~/Scripts/springyui.js"></script>
     <script type="text/javascript">
-        var data = { @Html.Raw((string)ViewBag.Data.ToString()) };
-        window.onload = function () { init(data); };
+        var graph = new Graph();
+        @Html.Raw((string)ViewBag.Data.ToString())
+        
+        window.onload = function () {
+            jQuery(function () {
+                var springy = jQuery('#springydemo').springy({
+                    graph: graph,
+                    nodeSelected: function (node) {
+                        console.log('Node selected: ' + JSON.stringify(node.data));
+                    }
+                });
+            });
+        };
     </script>
 }

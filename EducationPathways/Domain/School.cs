@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace EducationPathways.Domain
 {
@@ -25,6 +26,7 @@ namespace EducationPathways.Domain
         IList<INode> NextNodes { get; set; }
     }
 
+    [DebuggerDisplay("{Name}")]
     public class Syllabus : INode
     {
         public string Name { get; private set; }
@@ -37,6 +39,7 @@ namespace EducationPathways.Domain
         }
     }
 
+    [DebuggerDisplay("{Name}")]
     public class Subject : INode
     {
         public string Name { get; private set; }
@@ -49,6 +52,7 @@ namespace EducationPathways.Domain
         }
     }
 
+    [DebuggerDisplay("{Name}")]
     public class Topic : INode, IScorable
     {
         public int PassThreshold { get; private set; }
