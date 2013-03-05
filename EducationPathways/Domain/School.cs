@@ -18,39 +18,39 @@ namespace EducationPathways.Domain
         IEnumerable<Syllabus> Syllabuses { get; }
     }
 
-    public class Syllabus
+    public interface INode
     {
-        IEnumerable<Subject> Subjects { get; }
+        string Name { get; }
+        string Description { get; }
+        IEnumerable<INode> NextNodes { get; }
     }
 
-    public class Subject
+    public class Syllabus : INode
     {
-        IEnumerable<Topic> Topics { get; }
+        public string Name { get; private set; }
+        public string Description { get; private set; }
+        public IEnumerable<INode> NextNodes { get; private set; }
     }
 
-    public class Topic
+    public class Subject : INode
     {
-        IEnumerable<IAssessment> Assessments { get; }
+        public string Name { get; private set; }
+        public string Description { get; private set; }
+        public IEnumerable<INode> NextNodes { get; private set; }
     }
 
-    public interface IAssessment
+    public class Topic : INode, IScorable
+    {
+        public decimal PassThreshold { get; private set; }
+        public decimal Score { get; private set; }
+        public string Name { get; private set; }
+        public string Description { get; private set; }
+        public IEnumerable<INode> NextNodes { get; private set; }
+    }
+
+    public interface IScorable
     {
         decimal PassThreshold { get; }
         decimal Score { get; }
-    }
-
-    public class Examination : IAssessment {
-        public decimal PassThreshold { get; private set; }
-        public decimal Score { get; private set; }
-    }
-
-    public class CourseWork : IAssessment {
-        public decimal PassThreshold { get; private set; }
-        public decimal Score { get; private set; }
-    }
-
-    public class Practical : IAssessment {
-        public decimal PassThreshold { get; private set; }
-        public decimal Score { get; private set; }
     }
 }
