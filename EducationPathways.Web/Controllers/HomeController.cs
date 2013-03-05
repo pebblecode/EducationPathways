@@ -55,8 +55,8 @@ namespace EducationPathways.Web.Controllers
 
             builder.AppendFormat(@"id: '{0}',
                 name: '{1}',
-                data: {{}},
-                children: [", node.Name, node.Name);
+                data: {{$height: {2}}},
+                children: [", node.Name, node.Name, ((node.Name.Length / 18) + 1) * 23);
 
             var first = true;
             if (node.NextNodes != null)
