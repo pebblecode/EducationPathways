@@ -33,23 +33,23 @@ namespace EducationPathways.Domain
         IEnumerable<IAssessment> Assessments { get; }
     }
 
-    interface IAssessment
+    public interface IAssessment
     {
         decimal PassThreshold { get; }
         decimal Score { get; }
     }
 
-    class Examination : IAssessment {
+    public class Examination : IAssessment {
         public decimal PassThreshold { get; private set; }
         public decimal Score { get; private set; }
     }
 
-    class CourseWork : IAssessment {
+    public class CourseWork : IAssessment {
         public decimal PassThreshold { get; private set; }
         public decimal Score { get; private set; }
     }
 
-    class Practical : IAssessment {
+    public class Practical : IAssessment {
         public decimal PassThreshold { get; private set; }
         public decimal Score { get; private set; }
     }
