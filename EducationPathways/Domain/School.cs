@@ -51,8 +51,8 @@ namespace EducationPathways.Domain
 
     public class Topic : INode, IScorable
     {
-        public decimal PassThreshold { get; private set; }
-        public decimal Score { get; private set; }
+        public int PassThreshold { get; private set; }
+        public int Score { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
         public IEnumerable<INode> NextNodes { get; set; }
@@ -66,7 +66,7 @@ namespace EducationPathways.Domain
 
     public interface IScorable
     {
-        decimal PassThreshold { get; }
-        decimal Score { get; }
+        int PassThreshold { get; }
+        int Score { get; }
     }
 }

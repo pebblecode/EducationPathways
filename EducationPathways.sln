@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationPathways.Contracts
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationPathways.ServiceBus", "EducationPathways.ServiceBus\EducationPathways.ServiceBus.csproj", "{8675A36B-5B93-4524-9E93-0054747BEFE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{4D117B83-97E1-44FC-B753-0CA26ECE3B6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebApp", "TestWebApp\TestWebApp.csproj", "{8853EB63-A213-4FF9-B84C-5B7598F73F25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{8675A36B-5B93-4524-9E93-0054747BEFE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8675A36B-5B93-4524-9E93-0054747BEFE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8675A36B-5B93-4524-9E93-0054747BEFE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D117B83-97E1-44FC-B753-0CA26ECE3B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D117B83-97E1-44FC-B753-0CA26ECE3B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D117B83-97E1-44FC-B753-0CA26ECE3B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D117B83-97E1-44FC-B753-0CA26ECE3B6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8853EB63-A213-4FF9-B84C-5B7598F73F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8853EB63-A213-4FF9-B84C-5B7598F73F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8853EB63-A213-4FF9-B84C-5B7598F73F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8853EB63-A213-4FF9-B84C-5B7598F73F25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

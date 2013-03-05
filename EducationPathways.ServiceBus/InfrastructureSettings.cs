@@ -17,7 +17,7 @@ namespace EducationPathways.ServiceBus
 
         static InfrastructureSettings()
         {
-            var schema = XmlSchema.Read(typeof(InfrastructureSettings).Assembly.GetManifestResourceStream("Bingo.ServiceBus.Settings.xsd"), null);
+            var schema = XmlSchema.Read(typeof(InfrastructureSettings).Assembly.GetManifestResourceStream("EducationPathways.ServiceBus.Settings.xsd"), null);
             readerSettings = new XmlReaderSettings { ValidationType = ValidationType.Schema };
             readerSettings.Schemas.Add(schema);
         }
