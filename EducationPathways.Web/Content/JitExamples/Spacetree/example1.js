@@ -781,7 +781,7 @@ function init(){
         //nodes or edges
         Node: {
             height: 20,
-            width: 60,
+            width: 120,
             type: 'rectangle',
             color: '#aaa',
             overridable: true
@@ -815,7 +815,7 @@ function init(){
             };
             //set label styles
             var style = label.style;
-            style.width = 60 + 'px';
+            style.width = 120 + 'px';
             style.height = 17 + 'px';            
             style.cursor = 'pointer';
             style.color = '#333';
