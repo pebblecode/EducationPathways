@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace EducationPathways.Domain
 {
@@ -28,6 +29,7 @@ namespace EducationPathways.Domain
         void SetId(int id);
     }
 
+    [DebuggerDisplay("{Name}")]
     public class Syllabus : INode
     {
         public int Id { get; private set; }
@@ -46,6 +48,7 @@ namespace EducationPathways.Domain
         }
     }
 
+    [DebuggerDisplay("{Name}")]
     public class Subject : INode
     {
         public int Id { get; private set; }
@@ -64,6 +67,7 @@ namespace EducationPathways.Domain
         }
     }
 
+    [DebuggerDisplay("{Name}")]
     public class Topic : INode, IScorable
     {
         public int Id { get; private set; }
