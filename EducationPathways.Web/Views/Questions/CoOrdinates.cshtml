@@ -1,0 +1,12 @@
+﻿@model EducationPathways.Web.Models.AnswerViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.BeginForm()
+{
+    <p>What is the square root of 9?</p>
+    @Html.TextBoxFor(model => model.Answer)
+    @Html.HiddenFor(model => model.StartDate)
+}

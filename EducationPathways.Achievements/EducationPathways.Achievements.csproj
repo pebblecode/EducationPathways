@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AchievementHandlers\AssesmentCompletedHandler.cs" />
     <Compile Include="AchievementHandlers\BaseEventHandler.cs" />
     <Compile Include="AchievementHandlers\LinearAlgebra.cs" />
     <Compile Include="AchievementHandlers\Quickdraw.cs" />

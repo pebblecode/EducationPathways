@@ -17,7 +17,6 @@ namespace EducationPathways.Achievements
             var settings = InfrastructureSettings.Read(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase), "Settings.xml"));
             var eventProcessor = new EventProcessor(new SubscriptionReceiver(settings.ServiceBus, "AssesmentTopic", "AssesmentSubscription", false), new JsonTextSerializer());
 
-            eventProcessor.Register(new AssesmentCompletedHandler());
             eventProcessor.Register(new Quickdraw());
             eventProcessor.Register(new Thicko());
             eventProcessor.Register(new LinearAlgebra());
