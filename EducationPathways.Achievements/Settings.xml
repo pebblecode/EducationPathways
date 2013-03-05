@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<InfrastructureSettings xmlns="urn:education-servicebus">
+  <ServiceBus>
+    <ServiceUriScheme>sb</ServiceUriScheme>
+    <ServiceNamespace>education</ServiceNamespace>
+    <ServicePath></ServicePath>
+    <TokenIssuer>owner</TokenIssuer>
+    <TokenAccessKey>COT41Jjls75cXos7pq/VJDPO/kMUuG6x2eiyMvq8bN8=</TokenAccessKey>
+    <Topics>
+      <Topic Path="AssesmentTopic" IsEventBus="true">
+        <Subscription Name="AssesmentSubscription" RequiresSession="false"/>
+      </Topic>
+    </Topics>
+  </ServiceBus>
+</InfrastructureSettings>

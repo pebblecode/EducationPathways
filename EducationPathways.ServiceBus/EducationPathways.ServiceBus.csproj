@@ -109,9 +109,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Settings.xsd">
+    <EmbeddedResource Include="Settings.xsd">
       <SubType>Designer</SubType>
-    </None>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EducationPathways.Contracts\EducationPathways.Contracts.csproj">

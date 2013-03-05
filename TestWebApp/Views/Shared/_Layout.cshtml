@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    <link href="~/Content/toastr.min.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+            @Scripts.Render("~/bundles/jquery")
+    <script src="http://cdn.pubnub.com/pubnub-3.4.min.js"></script>
+    <script src="~/Scripts/toastr.min.js"></script>
+</head>
+    <body>
+        <div id=pubnub pub-key="pub-c-ad0c7dac-d725-45f8-a2e0-089ea016a4b9" sub-key="sub-c-d1d9d648-858a-11e2-8a8f-12313f022c90"></div>
+        @RenderBody()
+
+
+        @RenderSection("scripts", required: false)
+    </body>
+
+<script>(function () {
+
+    toastr.options = {
+        positionClass: 'toast-bottom-right'
+    };
+
+    var pubnub = PUBNUB.init({
+        publish_key: 'pub-c-ad0c7dac-d725-45f8-a2e0-089ea016a4b9',
+        subscribe_key: 'sub-c-d1d9d648-858a-11e2-8a8f-12313f022c90'
+    });
+
+    pubnub.subscribe({
+        channel: "Achievements",
+        message: function (m) { toastr.success(m.Description, m.Name); }
+    });
+
+})();</script>
+</html>
