@@ -12,25 +12,107 @@ namespace EducationPathways
     {
         public static void Main()
         {
-            var discreteMathTopics = new List<Topic>
+            var algebra = new Subject("Algebra")
                 {
-                    new Topic("Logic – a study of reasoning"),
-new Topic("Set theory – a study of collections of elements
-new Topic("Number theory"),
-new Topic("Combinatorics – a study of counting"),
-new Topic("Graph theory"),
-new Topic("Digital geometry and digital topology"),
-new Topic("Algorithmics – a study of methods of calculation"),
-new Topic("Information theory"),
-new Topic("Computability and complexity theories – dealing with theoretical and practical limitations of algorithms"),
-new Topic("Elementary probability theory and Markov chains"),
-new Topic("Linear algebra – a study of related linear equations"),
-new Topic("Functions"),
-new Topic("Partially ordered set"),
-new Topic("Probability"),
-new Topic("Proofs"),
-new Topic("Counting"),
-new Topic("Relation")
+                    NextNodes =
+                        new List<Topic> {
+                            new Topic("Introduction to algebra"),
+                            new Topic("Linear equations"),
+                            new Topic("Linear inequalities"),
+                            new Topic("Graphing points, equations and inequalities"),
+                            new Topic("Systems of equations and inequalities"),
+
+                            new Topic("Functions"),
+                            new Topic("Quadratics"),
+                            new Topic("Exponent expressions and equations"),
+                            new Topic("Polynomials"),
+                            new Topic("Ratios and rational expressions"),
+                            new Topic("Logarithms"),
+                            new Topic("Conic sections"),
+                            new Topic("Matrices"),
+                            new Topic("Imaginary and complex numbers")
+                        }
+                };
+
+            var linearAlgebra = new Subject("Linear Algebra")
+                {
+                    NextNodes = 
+                        new List<Topic>
+                        {
+                            new Topic("Vectors and spaces"),
+                            new Topic("Matrix transformations"),
+                            new Topic("Alternate coordinate systems (bases)")
+                        }
+                };
+
+            var geometry = new Subject("Geometry")
+                {
+                    NextNodes = new List<Topic>
+                        {
+                            new Topic("Circles"),
+                            new Topic("Angles"),
+                            new Topic("Triangles"),
+
+                            new Topic("Points, lines and planes"),
+                            new Topic("Angles and intersecting lines"),
+                            new Topic("Congruent triangles"),
+                            new Topic("Perimeter, area and volume"),
+
+                            new Topic("Similarity"),
+                            new Topic("Right triangles"),
+                            new Topic("Special properties and parts of triangles"),
+                            new Topic("Quadrilaterals")
+                        }
+                };
+
+            var trigonometry = new Subject("Trigonometry")
+                {
+                    NextNodes = new List<Topic>
+                        {
+                            new Topic("Graphing lines"),
+                            new Topic("Functions and their graphs"),
+                            new Topic("Polynomial and rational functions"),
+
+                            new Topic("Exponential and logarithmic functions"),
+                            new Topic("Basic trigonometry"),
+                            new Topic("Trig identities and examples"),
+
+                            new Topic("Parametric equations and polar coordinates"),
+                            new Topic("Conic sections"),
+                            new Topic("Sequences and induction"),
+
+                            new Topic("Probability and combinatorics"),
+                            new Topic("Imaginary and complex number"),
+                            new Topic("Hyperbolic trig functions")
+                        }
+                };
+
+            var discrete = new Subject("Discrete Maths")
+                {
+                    NextNodes = new List<Topic>
+                        {
+                            new Topic("Logic"),
+                            new Topic("Set theory"),
+                            new Topic("Number theory"),
+                            new Topic("Graph theory")
+                        }
+                };
+
+            var computerScience = new Syllabus("Computer Science")
+                {
+                    NextNodes = new List<Subject>
+                        {
+                            new Subject("Logic")
+                                {
+                                    NextNodes = new List<Topic>
+                                        {
+                                            new Topic("Boolean logic"),
+                                            new Topic("Statements and expressions"),
+                                            new Topic("If-then-else"),
+                                            new Topic("Pattern matching")
+                                        }
+                                }
+                        }
                 };
         }
     }
