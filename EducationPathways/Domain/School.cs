@@ -22,14 +22,14 @@ namespace EducationPathways.Domain
     {
         string Name { get; }
         string Description { get; }
-        IEnumerable<INode> NextNodes { get; }
+        IList<INode> NextNodes { get; set; }
     }
 
     public class Syllabus : INode
     {
         public string Name { get; private set; }
         public string Description { get; private set; }
-        public IEnumerable<INode> NextNodes { get; set; }
+        public IList<INode> NextNodes { get; set; }
 
         public Syllabus(string name)
         {
@@ -41,7 +41,7 @@ namespace EducationPathways.Domain
     {
         public string Name { get; private set; }
         public string Description { get; private set; }
-        public IEnumerable<INode> NextNodes { get; set; }
+        public IList<INode> NextNodes { get; set; }
 
         public Subject(string name)
         {
@@ -55,7 +55,7 @@ namespace EducationPathways.Domain
         public decimal Score { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
-        public IEnumerable<INode> NextNodes { get; set; }
+        public IList<INode> NextNodes { get; set; }
 
         public Topic(string name, string description = "")
         {

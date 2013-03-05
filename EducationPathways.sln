@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationPathways", "EducationPathways\EducationPathways.csproj", "{A399E51C-6EA5-4BD3-B5DB-58458F5AED49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationPathways.Tests", "EducationPathways.Tests\EducationPathways.Tests.csproj", "{CB444930-F9FB-4B84-BC61-565848466C2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{A399E51C-6EA5-4BD3-B5DB-58458F5AED49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A399E51C-6EA5-4BD3-B5DB-58458F5AED49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A399E51C-6EA5-4BD3-B5DB-58458F5AED49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB444930-F9FB-4B84-BC61-565848466C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB444930-F9FB-4B84-BC61-565848466C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB444930-F9FB-4B84-BC61-565848466C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB444930-F9FB-4B84-BC61-565848466C2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
