@@ -64,11 +64,11 @@ namespace EducationPathways.Web.Controllers
             {
                 builder.AppendFormat("var {0} = graph.newNode({{label: '{1}'}});", nodeVariable, node.Name);
                 names.Add(nodeVariable);
+
+                if (parentName != null)
+                    builder.AppendFormat("graph.newEdge({0}, {1}, {{color: '{2}'}});", parentName, nodeVariable, RandomPastelColorGenerator.Instance.GetNextBrush().Color.ToString());
             }
 
-
-            if (parentName != null)
-                builder.AppendFormat("graph.newEdge({0}, {1}, {{color: '{2}'}});", parentName, nodeVariable, RandomPastelColorGenerator.Instance.GetNextBrush().Color.ToString());
 
             if (node.NextNodes != null)
                 foreach (var subnode in node.NextNodes)
