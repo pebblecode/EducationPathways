@@ -68,13 +68,12 @@
                     .Add(1005, new Subject("Discrete Maths"), 10052)
                         .Add(10052, new Topic("Set theory"), 10053)
                         .Add(10053, new Topic("Number theory"), 10054)
-                        .Add(10054, new Topic("Graph theory"), 0)
+                        .Add(10054, new Topic("Graph theory"), 2000)
 
                 .Add(2000, new Syllabus("Computer Science"), 2001)
                     .Add(2001, new Subject("Logic"), 20011)
                         .Add(20011, new Topic("Boolean logic"), 20012)
                         .Add(20012, new Topic("Statements and expressions"), 20013)
-                        .Add(20013, new Topic("If-then-else"), 20013)
                         .Add(20013, new Topic("Pattern matching"), 0);
 
             return graph.Build();

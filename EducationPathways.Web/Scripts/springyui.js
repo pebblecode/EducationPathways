@@ -243,20 +243,22 @@ Copyright (c) 2010 Dennis Hotson
 
                 // fill background
                 if (selected !== null && nearest.node !== null && selected.node.id === node.id) {
-                    ctx.fillStyle = "#FFFFE0";
+                    ctx.fillStyle = "transparent";
                 } else if (nearest !== null && nearest.node !== null && nearest.node.id === node.id) {
-                    ctx.fillStyle = "#EEEEEE";
+                    ctx.fillStyle = "transparent";
                 } else {
-                    ctx.fillStyle = "#FFFFFF";
+                    ctx.fillStyle = "transparent";
                 }
                 ctx.fillRect(s.x - boxWidth / 2, s.y - 10, boxWidth, 20);
 
                 ctx.textAlign = "left";
                 ctx.textBaseline = "top";
-                if (node.data.bold === 'False') {
+                if (node.data.nodeType === 'Topic') {
                     ctx.font = "italic 12px Verdana, sans-serif";
-                } else {
+                } else if (node.data.nodeType === 'Subject') {
                     ctx.font = "bold 14px Verdana, sans-serif";
+                } else {
+                    ctx.font = "bold 20px Verdana, sans-serif";
                 }
                 ctx.fillStyle = "#000000";
                 var text = (node.data.label !== undefined) ? node.data.label : node.id;

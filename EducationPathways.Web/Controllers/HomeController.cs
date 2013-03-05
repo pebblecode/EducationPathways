@@ -62,7 +62,7 @@ namespace EducationPathways.Web.Controllers
             var nodeVariable = node.Name.ToLower().Replace(" ", "").Replace("(", "").Replace(")","").Replace(",","");
             if (!names.Contains(nodeVariable))
             {
-                builder.AppendFormat("var {0} = graph.newNode({{label: '{1}', bold: '{2}'}});", nodeVariable, node.Name, node is Subject);
+                builder.AppendFormat("var {0} = graph.newNode({{label: '{1}', nodeType: '{2}'}});", nodeVariable, node.Name, node.GetType().Name);
                 names.Add(nodeVariable);
 
                 if (parentName != null)
