@@ -46,6 +46,11 @@ namespace EducationPathways.Domain
         public string Name { get; private set; }
         public string Description { get; private set; }
         public IEnumerable<INode> NextNodes { get; private set; }
+
+        public Topic(string name)
+        {
+            
+        }
     }
 
     public interface IScorable
