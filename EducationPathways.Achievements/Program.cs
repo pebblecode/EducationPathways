@@ -18,6 +18,9 @@ namespace EducationPathways.Achievements
             var eventProcessor = new EventProcessor(new SubscriptionReceiver(settings.ServiceBus, "AssesmentTopic", "AssesmentSubscription", false), new JsonTextSerializer());
 
             eventProcessor.Register(new AssesmentCompletedHandler());
+            eventProcessor.Register(new Quickdraw());
+            eventProcessor.Register(new Thicko());
+            eventProcessor.Register(new LinearAlgebra());
             eventProcessor.Start();
 
             Console.ReadLine();
