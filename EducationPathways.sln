@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationPathways", "EducationPathways\EducationPathways.csproj", "{A399E51C-6EA5-4BD3-B5DB-58458F5AED49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationPathways.Achievements", "EducationPathways.Achievements\EducationPathways.Achievements.csproj", "{616401C5-2D58-4A59-A007-77C0782CF7E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationPathways.Web", "EducationPathways.Web\EducationPathways.Web.csproj", "{2691909B-7E0C-492E-877F-5BD2A4AB9692}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationPathways.Contracts", "EducationPathways.Contracts\EducationPathways.Contracts.csproj", "{7A62BD1E-A54F-41A5-B5F0-3A2EFE7D84EA}"
 EndProject
@@ -19,6 +19,10 @@ Global
 		{A399E51C-6EA5-4BD3-B5DB-58458F5AED49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A399E51C-6EA5-4BD3-B5DB-58458F5AED49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A399E51C-6EA5-4BD3-B5DB-58458F5AED49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2691909B-7E0C-492E-877F-5BD2A4AB9692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2691909B-7E0C-492E-877F-5BD2A4AB9692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2691909B-7E0C-492E-877F-5BD2A4AB9692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2691909B-7E0C-492E-877F-5BD2A4AB9692}.Release|Any CPU.Build.0 = Release|Any CPU
 		{616401C5-2D58-4A59-A007-77C0782CF7E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{616401C5-2D58-4A59-A007-77C0782CF7E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{616401C5-2D58-4A59-A007-77C0782CF7E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
