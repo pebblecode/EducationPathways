@@ -17,10 +17,10 @@
                         .Add(10014, new Topic("Graphing points, equations and inequalities"), 10015)
                         .Add(10015, new Topic("Systems of equations and inequalities"), 10016)
 
-                        .Add(10016, new Topic("Functions"), 10019)
-                        .Add(10016, new Topic("Quadratics"), 10019)
-                        .Add(10017, new Topic("Exponent expressions and equations"), 10019)
-                        .Add(10017, new Topic("Polynomials"), 10019)
+                        .Add(10016, new Topic("Functions"), 10017)
+                        .Add(10016, new Topic("Quadratics"), 10017)
+                        .Add(10017, new Topic("Exponent expressions and equations"), 10018)
+                        .Add(10017, new Topic("Polynomials"), 10018)
                         .Add(10018, new Topic("Ratios and rational expressions"), 10019)
 
                         .Add(10019, new Topic("Logarithms"), 1002)

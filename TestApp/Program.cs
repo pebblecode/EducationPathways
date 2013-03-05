@@ -20,11 +20,13 @@ namespace TestApp
             var topicSender = new TopicSender(settings.ServiceBus, "AssesmentTopic");
 
             var eventBus = new EventBus(topicSender, metadata, serializer);
-
+            int baseTopicId = 10021;
             for (int i = 0;; i++)
             {
                 var assesmentCompleted = new AssesmentCompleted
                 {
+                    SubjectId = 1002,
+                    TopicId = baseTopicId++,
                     CompletedDate = DateTime.Now, 
                     PassThreshold = 80, 
                     Score = 70, 

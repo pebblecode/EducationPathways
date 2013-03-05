@@ -6,6 +6,10 @@ namespace EducationPathways.Contracts
     {
         public Guid SourceId { get; private set; }
 
+        public int SubjectId { get; set; }
+
+        public int TopicId { get; set; }
+
         public string TopicName { get; set; }
 
         public int Score { get; set; }
